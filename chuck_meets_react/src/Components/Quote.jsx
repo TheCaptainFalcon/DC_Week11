@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 
 class Quote extends Component {
+  state = {
+    quote: "Chuck eats dinosaurs for a snack"
+  }
+
   render() {
-    const getQuote = "Chuck eats dinosaurs for a snack"
+    const { quote } = this.state;
     return (
       <div>
         <p>Chuck Says...</p>
-        <p>{getQuote}</p>
+        <p>{ quote } </p>
       </div>
     );
   }
