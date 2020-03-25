@@ -17,7 +17,7 @@ class MemoryCard extends Component {
         let memoryCardInnerClass = 'MemoryCardInner';
         if (this.state.isFlipped === true) { memoryCardInnerClass ='MemoryCardInner flipped'}
         return (
-            <div className='MemoryCard' onClick={this.clickHandler}>
+            <div className='MemoryCard' onClick={this.clickHandler.bind(this)}>
                 <div className={ memoryCardInnerClass }>
                     <div className='MemoryCardBack'>
                         <img src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png" alt=""/>
