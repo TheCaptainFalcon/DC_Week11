@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import './MemoryCard.css';
 
-class MemoryCard extends Component {
-    clickHandler() {
-    alert('card clicked');
+class MemoryCard extends Component {    
+    constructor() {
+        super();
+        this.state = { isFlipped:false };
     }
-    
+
+    clickHandler() {
+        this.setState({
+            isFlipped: !this.state.isFlipped
+        }); 
+    }
+
     render() {
         return (
             <div className='MemoryCard' onClick={this.clickHandler}>
