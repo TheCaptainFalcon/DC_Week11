@@ -31,7 +31,7 @@ class App extends Component {
     super();
     this.state = {
       deck: generateDeck(),
-      pickedCards = []
+      pickedCards : []
     }
   }
    
@@ -39,7 +39,7 @@ class App extends Component {
     let deck = [];    
     let cardsJSX = this.state.deck.map((card, index) => {
       return(
-        <MemoryCard symbol= {card.symbol} isFlipped= {card.isFlipped}/>
+        <MemoryCard symbol= {card.symbol} isFlipped= {card.isFlipped} key= {index}/>
       )
     })
 
