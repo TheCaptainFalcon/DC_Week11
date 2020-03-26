@@ -30,18 +30,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      deck: generateDeck()
+      deck: generateDeck(),
+      pickedCards = []
     }
   }
    
   render() {  
-    let deck = [];
-    let pickedCards = [];
-    let cardsJSX = this.state.deck.map((card, index => {
+    let deck = [];    
+    let cardsJSX = this.state.deck.map((card, index) => {
       return(
-        <MemoryCard />
+        <MemoryCard symbol= {card.symbol} isFlipped= {card.isFlipped}/>
       )
-    }))
+    })
+
 
   return (
     <div className="App" >
