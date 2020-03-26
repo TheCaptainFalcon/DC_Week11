@@ -37,6 +37,11 @@ class App extends Component {
   render() {  
     let deck = [];
     let pickedCards = [];
+    let cardsJSX = this.state.deck.map((card, index => {
+      return(
+        <MemoryCard />
+      )
+    }))
 
   return (
     <div className="App" >
@@ -44,30 +49,12 @@ class App extends Component {
         <h2 className="title">Memory Game</h2>
         <h2 className="subtitle">Match cards to win</h2>
       </header>
-      <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-      </div>
-      <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-      </div>
-      <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-      </div>
-      <div>
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-        <MemoryCard />
-      </div>
+
+      {cardsJSX.slice(0,4)}
+      {cardsJSX.slice(4,8)}
+      {cardsJSX.slice(8,12)}
+      {cardsJSX.slice(12,16)}
+      
     </div>
   );
 }
