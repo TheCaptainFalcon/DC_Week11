@@ -8,23 +8,26 @@ import {Card, Button } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
+      <h1 className="Waldo">WHERE'S WALDO?</h1>
       <header className="App-header">
-
-        <Card style={{ width: '18rem', }}>
+        
+        <Card style={{ width: '25rem', margin:'auto 0.5rem' }}>
             <Card.Text>
               <Results />
+              
             </Card.Text>
+            
           
         </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '25rem', margin:'auto 0.5rem' }}>
           
             <Card.Text>
               <Results />
             </Card.Text>
     
         </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '25rem', margin:'auto 0.5rem' }}>
           
             <Card.Text>
               <Results />

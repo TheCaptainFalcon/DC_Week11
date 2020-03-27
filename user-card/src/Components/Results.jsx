@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Results extends Component {
     state = {
@@ -43,6 +45,8 @@ class Results extends Component {
         }
     }
 
+
+
     render() {
         const { picture } = this.state;
         const { firstName } = this.state;
@@ -54,11 +58,25 @@ class Results extends Component {
         return (
             <div className='userCard'>
                 <div><img src={picture} alt="" className='profileImage' /></div>
-                { firstName } { lastName }
-                { email }
-                { birthday }
-                { address}
+                <p>
+                    { firstName } <span></span>
+                    { lastName }
+                </p>
                 
+                <p>
+
+                { address}
+                </p>
+                { birthday }
+                <br/>
+
+                { email }
+                <br/>
+                <Button type='button' style={{
+                    background:'green',
+                }}
+                onClick={ () =>{this.componentDidMount()}}>Randomize</Button>
+
             </div>
         )
     }
