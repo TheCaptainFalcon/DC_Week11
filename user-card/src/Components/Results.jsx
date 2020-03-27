@@ -53,12 +53,11 @@ class Results extends Component {
         const { phone } = this.state;
         return (
             <div className='userCard'>
-                <img src={picture} alt="" className='profileImage' />
-                <p>Hi, my name is</p>
-                <h1>{ firstName } { lastName }</h1>
-                <p>{ email }</p>
-                <p>{ birthday }</p>
-                <p>{ address} </p>
+                <div><img src={picture} alt="" className='profileImage' /></div>
+                { firstName } { lastName }
+                { email }
+                { birthday }
+                { address}
                 
             </div>
         )
